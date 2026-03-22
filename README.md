@@ -29,7 +29,7 @@ require "collections"
 | `Stack` | LIFO (Last In, First Out) data structure |
 | `Queue` | FIFO (First In, First Out) data structure |
 | `LinkedList` | Doubly linked list with O(1) insert/delete at ends |
-| `BinarySearchTree` | Self-balancing binary search tree |
+| `BinaryTree` | Self-balancing binary search tree |
 
 ## Development
 
