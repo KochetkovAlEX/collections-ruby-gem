@@ -1,0 +1,8 @@
+### Folders ###
+.idea
+.vscode
+.devcontainer
+
+
+### Files ###
+.env

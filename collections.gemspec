@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "A Ruby gem for collections"
   spec.description = "A Ruby gem providing useful collection utilities"
-  spec.homepage = "https://github.com/yourusername/collections"
+  spec.homepage = "https://github.com/KochetkovAlEX/collections-ruby-gem.git"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
