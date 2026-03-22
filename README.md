@@ -24,12 +24,12 @@ require "collections"
 
 ## Implemented Collections
 
-| Collection | Description |
-|------------|-------------|
-| `Stack` | LIFO (Last In, First Out) data structure |
+| Collection | Description                               |
+|------------|-------------------------------------------|
+| `Stack` | LIFO (Last In, First Out) data structure  |
 | `Queue` | FIFO (First In, First Out) data structure |
-| `LinkedList` | Doubly linked list with O(1) insert/delete at ends |
-| `BinaryTree` | Self-balancing binary search tree |
+| `LinkedList` | Default linked list data structure        |
+| `BinaryTree` | Self-balancing binary search tree         |
 
 ## Development
 
