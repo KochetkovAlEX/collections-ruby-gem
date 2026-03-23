@@ -109,6 +109,11 @@ module Collections
       tmp.set_queue(@stack)
       tmp
     end
+
+    # Create Array from exsisting Stack
+    def to_a
+      @stack
+    end
   
     attr_reader :peek
   end

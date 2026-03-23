@@ -98,6 +98,11 @@ module Collections
         -1
       end
     end
+
+    # Create Array from exsisting Queue
+    def to_a
+      @queue
+    end
   
     attr_reader :top
   end
