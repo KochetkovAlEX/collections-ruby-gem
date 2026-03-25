@@ -62,17 +62,14 @@ module Collections
       @peek = nil
       @stack = []
     end
-  
+
     # Insert element at index
     def insert(element, index)
+      raise IndexError if index < 0 || index > @stack.length
       if index == 0
         self.push(element)
       else
-        if index > @stack.length
-          puts "Wrong index"
-        else
-          @stack = @stack[..-(index + 1)] + [element] + @stack[-index..]
-        end
+        @stack = @stack[..-(index + 1)] + [element] + @stack[-index..]
       end
     end
   
@@ -112,9 +109,12 @@ module Collections
 
     # Create Array from exsisting Stack
     def to_a
-      @stack
+      new_arr = []
+      @stack.each{ |x| new_arr.append(x) }
+      new_arr
     end
   
     attr_reader :peek
   end
 end
+

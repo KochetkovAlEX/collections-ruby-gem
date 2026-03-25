@@ -50,18 +50,15 @@ module Collections
       tmp.set_stack(@queue)
       tmp
     end
-  
+
     # Insert element at index
     def insert(element, index)
+      raise IndexError if index < 0 || index > @queue.length
       if index == 0
         @top = element
         @queue = [element] + @queue
       else
-        if index > @queue.length
-          puts "Wrong index"
-        else
-          @queue = @queue[..index - 1] + [element] + @queue[index..]
-        end
+        @queue = @queue[..index - 1] + [element] + @queue[index..]
       end
     end
   
@@ -99,9 +96,11 @@ module Collections
       end
     end
 
-    # Create Array from exsisting Queue
+    # Create array from queue
     def to_a
-      @queue
+      new_arr = []
+      @queue.each{ |x| new_arr.append(x) }
+      new_arr
     end
   
     attr_reader :top
