@@ -1,6 +1,6 @@
-require_relative "node"
+require_relative "binary-node"
 
-module BinaryTree
+module Collections
   class Tree
     attr_accessor :root
     
@@ -42,7 +42,7 @@ module BinaryTree
     private
     
     def insert_recursive(node, value)
-      return Node.new(value) if node.nil?
+      return BinaryNode.new(value) if node.nil?
       
       if value < node.value
         node.left = insert_recursive(node.left, value)

@@ -1,5 +1,5 @@
-module BinaryTree
-  class Node
+module Collections
+  class BinaryNode
     attr_accessor :value, :left, :right
     
     def initialize(value)
