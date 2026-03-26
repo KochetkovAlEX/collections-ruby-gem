@@ -109,5 +109,6 @@ module Collections
     end
 
     attr_reader :top
+    alias_method :empty?, :is_empty
   end
 end

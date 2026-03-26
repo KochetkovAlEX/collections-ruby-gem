@@ -45,13 +45,13 @@ module Collections
     # Delete TOS and get its value
     def pop
       if !self.is_empty
-        if stack.length == 1
+        if @stack.length == 1
           prev = @peek
           @stack = []
           @peek = nil
           prev
         else 
-          @peek = stack[-2]
+          @peek = @stack[-2]
           @stack.pop()
         end
       end
@@ -115,6 +115,6 @@ module Collections
     end
   
     attr_reader :peek
+    alias_method :empty?, :is_empty
   end
 end
-

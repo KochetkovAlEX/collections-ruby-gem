@@ -86,10 +86,11 @@ module Collections
       raise IndexError, "List is empty" if @head.nil?
 
       current = @head
-      (index - 1).times do
+      index.times do
         raise IndexError, "Index #{index} out of bounds" if current.nil?
         current = current.next_node
       end
+      raise IndexError, "Index #{index} out of bounds" if current.nil?
       current.value
     end
 
@@ -103,6 +104,21 @@ module Collections
         current = current.next_node
       end
       nil
+    end
+
+    def size
+      # Return the size of the list
+      count = 0
+      current = @head
+      while current
+        count += 1
+        current = current.next_node
+      end
+      count
+    end
+
+    def empty?
+      @head.nil?
     end
   end
 end
