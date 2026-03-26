@@ -96,4 +96,6 @@ module Collections
       end
     end
   end
+
+  BinarySearchTree = Tree
 end

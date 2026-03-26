@@ -6,44 +6,49 @@ module Collections
       @top = nil
       @queue = []
     end
-  
+
     # Set new top value
     def set_top(new_top)
       @top = new_top
       @queue[0] = new_top
     end
-  
+
     # Set queue from existing array
     def set_queue(arr)
       if arr.length > 0
         @queue = []
         arr.each{ |x| @queue.append(x) }
         @top = @queue[0]
-      end 
+      end
     end
-  
+
     # Add element to queue
-    def push(element)
+    def enqueue(element)
       if @queue.length == 0
         @top = element
       end
       @queue.append(element)
     end
-  
+
     # Delete top of the queue and get its value
-    def pop
+    def dequeue
       prev = @top
       @queue = @queue[1..]
       @top = @queue[0]
       prev
     end
-  
+
+    # Get front element
+    def front
+      @top
+    end
+
     # Clear queue
     def clear
       @top = nil
       @queue = []
     end
-  
+
     # Create Stack from existing Queue
     def to_s
       tmp = Stack.new
@@ -61,29 +66,29 @@ module Collections
         @queue = @queue[..index - 1] + [element] + @queue[index..]
       end
     end
-  
+
     # Get queue size
     def size
       @queue.length
     end
-  
+
     # Check if queue is empty
     def is_empty
       @queue.length == 0
     end
-    
+
     # Check if queue contains element
     def contains(element)
       @queue.include?(element)
     end
-  
+
     # Print queue
     def print
       puts "TOP -> #{@top}"
       @queue[1..].each{ |x| puts sprintf("%6s #{x}", '')}
     end
-  
-    # Get element's index 
+
+    # Get element's index
     def index(element)
       if @queue.include?(element)
         i = 0
@@ -102,7 +107,7 @@ module Collections
       @queue.each{ |x| new_arr.append(x) }
       new_arr
     end
-  
+
     attr_reader :top
   end
 end

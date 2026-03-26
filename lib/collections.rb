@@ -3,6 +3,8 @@
 require_relative "collections/version"
 require_relative "collections/node"
 require_relative "collections/linked_list"
+require_relative "collections/stack"
+require_relative "collections/queue"
 
 # Binary Tree
 require_relative "collections/tree"
