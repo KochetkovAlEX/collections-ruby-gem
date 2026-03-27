@@ -1,6 +1,6 @@
 # Collections
 
-A collection of classic data structures for Ruby, providing Stack and Queue implementations.
+A collection of classic data structures for Ruby.
 
 ---
 
