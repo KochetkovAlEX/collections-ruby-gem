@@ -28,8 +28,8 @@ require "collections"
 |------------|-------------------------------------------|
 | `Stack` | LIFO (Last In, First Out) data structure  |
 | `Queue` | FIFO (First In, First Out) data structure |
-| `LinkedList` | Default linked list data structure        |
-| `BinaryTree` | Self-balancing binary search tree         |
+| `LinkedList` | Singly linked list data structure         |
+| `Tree` | Binary search tree data structure         |
 
 ## Development
 

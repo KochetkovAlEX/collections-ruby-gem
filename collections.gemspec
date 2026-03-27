@@ -10,14 +10,14 @@ Gem::Specification.new do |spec|
 
   spec.summary = "A Ruby gem for collections"
   spec.description = "A Ruby gem providing useful collection utilities"
-  spec.homepage = "https://github.com/KochetkovAlEX/collections-ruby-gem.git"
+  spec.homepage = "https://github.com/KochetkovAlEX/collections-ruby-gem"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
   spec.metadata["rubygems_mfa_required"] = "true"
 
-  spec.files = Dir["lib/**/*", "LICENSE.txt", "README.md"]
+  spec.files = Dir["lib/**/*", "Doc.md", "LICENSE.txt", "README.md"]
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "rake", "~> 13.0"

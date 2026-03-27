@@ -340,6 +340,245 @@ Returns the current front element without modifying the queue.
 
 ---
 
+# Collections::LinkedList
+
+A singly linked list data structure implementation in Ruby.
+
+## Overview
+
+The `Collections::LinkedList` class provides a classic linked list data structure where elements are connected via nodes. Each node contains a value and a reference to the next node.
+
+## Class Methods
+
+### `new(data = nil)`
+
+Creates a new linked list instance, optionally with an initial element.
+
+**Parameters:**
+- `data` (optional) – the initial data element for the first node
+
+**Returns:** a new `LinkedList` object
+
+## Instance Methods
+
+### `append(data)`
+
+Adds an element to the end of the list.
+
+**Parameters:**
+- `data` – the data to append
+
+**Returns:** void
+
+---
+
+### `prepend(data)`
+
+Adds an element to the beginning of the list.
+
+**Parameters:**
+- `data` – the data to prepend
+
+**Returns:** void
+
+---
+
+### `insert_at(index, data)`
+
+Inserts an element at the specified position in the list.
+
+**Parameters:**
+- `index` – the position where to insert (0-based)
+- `data` – the data to insert
+
+**Raises:** `IndexError` if index is negative or out of bounds
+
+**Returns:** void
+
+---
+
+### `delete_at(index)`
+
+Removes and returns the element at the specified position.
+
+**Parameters:**
+- `index` – the position of the element to delete (0-based)
+
+**Returns:** the value of the deleted element
+
+**Raises:** `IndexError` if index is out of bounds or list is empty
+
+---
+
+### `at(index)`
+
+Returns the element at the specified position without removing it.
+
+**Parameters:**
+- `index` – the position of the element (0-based)
+
+**Returns:** the value at the specified position
+
+**Raises:** `IndexError` if index is out of bounds or list is empty
+
+---
+
+### `find(data)`
+
+Searches for the first node containing the specified value.
+
+**Parameters:**
+- `data` – the value to search for
+
+**Returns:** the Node object if found, or `nil` if not found
+
+---
+
+### `to_a`
+
+Converts the linked list to an array.
+
+**Returns:** `Array` – a new array containing all elements in order
+
+---
+
+### `size`
+
+Returns the number of elements in the list.
+
+**Returns:** `Integer` – the current list size
+
+---
+
+### `empty?`
+
+Checks whether the list has no elements.
+
+**Returns:** `true` if the list is empty, `false` otherwise
+
+---
+
+## Notes
+
+- The list uses a singly linked structure with Node objects
+- Operations like `append` and `find` require linear traversal
+- The first element is accessed via the head reference
+- All elements are stored in insertion order
+
+---
+
+# Collections::Tree
+
+A binary search tree data structure implementation in Ruby.
+
+## Overview
+
+The `Collections::Tree` class provides a binary search tree (BST) implementation. Elements are organized in a tree structure where each node has at most two children (left and right), maintaining the BST property: left child values are less than parent values, and right child values are greater.
+
+## Class Methods
+
+### `new`
+
+Creates a new empty tree instance.
+
+**Returns:** a new `Tree` object
+
+---
+
+### `with_root(value)`
+
+Creates a new tree with a root node containing the specified value.
+
+**Parameters:**
+- `value` – the value for the root node
+
+**Returns:** a new `Tree` object with the root initialized
+
+---
+
+### `build(&block)`
+
+Creates a new tree and evaluates a block in the tree's context for DSL-style construction.
+
+**Parameters:**
+- `block` – a block to execute in the tree's context for adding elements
+
+**Returns:** a new `Tree` object
+
+---
+
+### `from_values(*values)`
+
+Creates a new tree and populates it with the specified values.
+
+**Parameters:**
+- `*values` – variable number of values to add to the tree
+
+**Returns:** a new `Tree` object containing all provided values
+
+---
+
+## Instance Methods
+
+### `add(value)`
+
+Inserts a value into the tree while maintaining BST properties.
+
+**Parameters:**
+- `value` – the value to add
+
+**Returns:** void
+
+**Note:** Duplicate values are not inserted (maintains BST uniqueness)
+
+---
+
+### `delete(value)`
+
+Removes a value from the tree while maintaining BST properties.
+
+**Parameters:**
+- `value` – the value to delete
+
+**Returns:** void
+
+**Note:** Handles nodes with 0, 1, or 2 children correctly
+
+---
+
+### `display`
+
+Prints the tree structure to the console in a visual format.
+
+**Returns:** void
+
+**Note:** Shows the tree hierarchy with branches and nil nodes
+
+---
+
+## Attributes
+
+### `root`
+
+Direct access to the root node of the tree.
+
+**Type:** `BinaryNode` or `nil`
+
+---
+
+## Notes
+
+- The tree implementation uses `BinaryNode` objects for tree nodes
+- BST properties are maintained: left < parent < right
+- The `display` method shows the tree structure visually
+- All operations use recursive algorithms
+- `BinarySearchTree` is an alias for `Tree` (see `Collections::BinarySearchTree`)
+
+---
+
 # See Also
 
-- `Collections::LinkedList` – doubly linked list implementation
+- `Collections::LinkedList` – singly linked list implementation
+- `Collections::Tree` / `Collections::BinarySearchTree` – binary search tree implementation
+- `Collections::Stack` – LIFO data structure
+- `Collections::Queue` – FIFO data structure
